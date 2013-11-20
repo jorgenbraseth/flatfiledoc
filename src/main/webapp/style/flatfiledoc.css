@@ -1,0 +1,14 @@
+body {
+    font-family: verdana, sans-serif;
+}
+.line {
+    display: block;
+    color: black;
+    margin: .3em 0;
+}
+
+.token {
+    display: inline-block;
+    background-color: #eee;
+    margin: 0 .5em;
+}
