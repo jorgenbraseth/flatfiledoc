@@ -1,14 +1,48 @@
+/*
+Icons from:
+https://www.iconfinder.com/iconsets/20-flat-icons
+
+
+*/
+
 body {
     font-family: verdana, sans-serif;
 }
+
+#data {
+    margin: 1em;
+    padding: 1em;
+    border: 1px solid #aaa;
+}
+
 .line {
     display: block;
     color: black;
     margin: .3em 0;
 }
+.line.unparsed {
+    color: #aaa;
+    font-style: italic;
+}
 
 .token {
     display: inline-block;
     background-color: #eee;
-    margin: 0 .5em;
+    margin: 0 .5em 0 0;
+}
+
+#droptarget {
+    color: #666;
+    border: 1px solid #666;
+    padding: .5em .5em .5em;
+    border-radius: 10px;
+    width: 96px;
+    height: 155px;
+    background-image: url("../img/file.png");
+    background-repeat: no-repeat;
+    background-position: center 2em;
+}
+
+#droptarget:hover {
+    background-color: #eee;
 }
