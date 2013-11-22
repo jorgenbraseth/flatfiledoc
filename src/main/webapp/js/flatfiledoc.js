@@ -107,16 +107,16 @@ function tokenize(line, lineDefs) {
 function loadData(file) {
     if(definitionLoaded) {
         var dataHolder = $("#data");
+        dataHolder.text("");
+        hideLineInfo();
         dataHolder.addClass("spinner");
         var file = file[0], reader = new FileReader();
         reader.onload = function(event) {
             var parsedDocument = parseDocument(event.target.result);
             $("#dataSource").text(file.name);
-
             dataHolder.removeClass("spinner");
             dataHolder.html(parsedDocument);
             dataHolder.removeClass("unloaded");
-
         };
         reader.readAsText(file);
         dataLoaded = true;
