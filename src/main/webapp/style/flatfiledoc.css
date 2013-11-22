@@ -5,15 +5,38 @@ https://www.iconfinder.com/iconsets/20-flat-icons
 
 */
 
-body, dt, dd  {
+body, dt, dd, th, td  {
     font-family: verdana, sans-serif;
     font-size: 14px;
 }
 
+body {
+    background-color: #84cc3c;
+    margin: 0;
+    padding: 0;
+}
+
+#definitionArea {
+    background-color: black;
+    color: white;
+}
+#dataArea {
+    color: black;
+}
+section {
+    margin: 0;
+    padding: 1em;
+}
+#definition {
+    white-space: pre;
+    overflow: auto;
+}
 #data {
     margin: 1em;
-    padding: 1em;
+    padding: 1em 1em 3em 1em;
     border: 1px solid #aaa;
+    font-family: courier, monospace;
+    background-color: white;
 }
 
 .line {
@@ -21,18 +44,23 @@ body, dt, dd  {
     color: black;
     margin: .3em 0;
     font-weight: bold;
+    clear: both;
 }
 
 .token {
     display: inline-block;
     background-color: #efe;
-    margin: 0 .5em 0 0;
+    /*margin-right: 1ex;*/
+    min-width: 1em;
+    height: 1.5em;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
 }
-.token.unknownFormat {
+.unknownFormat {
     background-color: #fed;
     font-style: italic;
     font-weight: normal;
-    /*font-size: .8em;*/
 }
 
 .droptarget.unloaded.spinner {
@@ -41,7 +69,6 @@ body, dt, dd  {
 
 .droptarget.unloaded {
     color: #666;
-    border: 1px solid #666;
     padding: .5em .5em .5em;
     border-radius: 10px;
     min-height: 155px;
@@ -60,7 +87,7 @@ body, dt, dd  {
     left: 2em;
     top: 2em;
     border: 1px solid black;
-    width: 450px;
+    /*width: 450px;*/
     min-height: 50px;
     display: none;
     background-color: white;
@@ -70,28 +97,29 @@ body, dt, dd  {
     box-sizing: border-box;
 }
 
-dt,dd {
+table {
+    border-collapse: collapse;
+}
+td, th {
+    text-align: left;
+    padding: .1em .3em;
+}
+td {
+    vertical-align: top;
+}
+th {
+    vertical-align: bottom;
+}
+
+tbody td {
+    border: 1px solid #aaa;
+    background-color: #eee;
+    white-space: nowrap;
+    font-family: courier, monospace;
+}
+
+tfoot td {
     font-size: .7em;
-    background-color: transparent;
-    box-sizing: border-box;
-    width: 49%;
-}
-
-.valuePair {
-    background-color: red;
-    display: block;
-    position: relative;
-}
-
-dt {
-    display: table-cell;
-    float: left;
-    clear: left;
-}
-
-dd {
-    display: table-cell;
-    float: right;
-    font-weight: bold;
-    clear: right;
+    color: #999;
+    padding-top: .5em;
 }

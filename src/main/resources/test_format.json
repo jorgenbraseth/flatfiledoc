@@ -1,0 +1,69 @@
+[
+    {
+        pattern: /^ENH .*/i,
+        lines: [
+            { start: 0, end: 3, name: "Felttype", description: "Identifiserer start enhet  record" },
+            { start: 4, end: 12, name: "Orgnr" },
+            { start: 13, end: 16, name: "Enhetstype" },
+            { start: 17, end: 17, name: "Hovedsakstype" },
+            { start: 18, end: 21, name: "Undersakstype" },
+            { start: 22, end: 29, name: "Opprettet", description: "Dato hvor enheten ble innført som ny i ER" },
+            { start: 30, end: 37, name: "Siste endring", description: "Dato for siste endring på enheten" },
+            { start: 38, end: 38, name: "Første overføring" },
+            { start: 39, end: 47, name: "Korrekt orgnr" },
+            { start: 48, end: 48, name: "Type", description: "Type overføring" }
+        ]
+    },
+    {
+        pattern: /^TRAI.*/i,
+        lines: [
+            { start: 0, end: 3, name: "Felttype", description: "Trailer record" },
+            { start: 4, end: 6, name: "Avsender", description: "ER er avsender" },
+            { start: 7, end: 13, name: "Enheter", description: "Antall enheter overført" },
+            { start: 14, end: 22, name: "Records", description: "Antall records overført" }
+        ]
+    },
+    {
+        pattern: /^HEAD.*/i,
+        lines: [
+            { start: 0, end: 3, name: "Felttype", description: "Felttype: Header record" },
+            { start: 4, end: 6, name: "Avsender", description: "Avsender: ER er avsender" },
+            { start: 7, end: 14, name: "Generert dato", description: "ÅÅÅÅMMDD" },
+            { start: 15, end: 19, name: "Kjørenr.", description: "Ledende 0.<br/>Hver overføring nummereres fortløpende.<br/>Det skal ikke være hull i nummerserien." },
+            { start: 20, end: 22, name: "Produsent", description: "Tilsvarende avsender i batch in." },
+            { start: 23, end: 23, name: "Filtype", description: "A = Ordinær ajourholdsdata utveksling.<br/>\nS =  Data bestilt via \"SKD knappen\"<br/>\nK = Knytningsfil med begrensede enhetsdata<br/>" }
+        ]
+    },
+    {
+        pattern: /^USYS.*/i,
+        lines: [
+            { start: 0, end: 3, name: "Status", description: "Ubemannet virksomhet" },
+            { start: 4, end: 4, name: "Endringstype", description: "N: Ny eller endret<br/>\nU: Utgått<br/>\nK: Kopi av tidligere sendt oppl." },
+            { start: 5, end: 7, name: "Endret av", description: "Kode for avsender som sist endret oppl." }
+        ]
+    },
+    {
+        pattern: /^LEDE.*/i,
+        lines: [
+            { start: 0, end: 3, name: "Felttype" },
+            { start: 4, end: 4, name: "Endringstype", description: 'N: Ny eller endret<br/>\nU: Utgått<br/>\nK: Kopi av tidligere sendt oppl.' },
+            { start: 5, end: 7, name: "Endret av" },
+            { start: 8, end: 8, name: "Rolle", description: "(R)olle eller (K)nytning" },
+            { start: 9, end: 9, name: "Data", description: "Indikerer at dette er data for rollen (I motsetning til fritekst)" },
+            { start: 10, end: 39, name: "Ansvarsandel" },
+            { start: 40, end: 40, name: "E", description: "F = Egenfratreden<br/>\nN = Ikke fratrådt<br/>\nK = Fratrådt pga konkurskarantene<br/>\nR = Fratrådt pga rettighetstap<br/>" },
+            { start: 41, end: 44, name: "Valgt av"},
+            { start: 45, end: 47, name: "Rekkefølge", description: "Presentasjonsrekkefølge av styremedlemmer osv." },
+            { start: 48, end: 58, name: "TIN", description: "Fødselsnr eller Dnr." },
+            { start: 59, end: 108, name: "Fornavn"},
+            { start: 109, end: 158, name: "Mellomnavn"},
+            { start: 159, end: 208, name: "Slektsnavn"},
+            { start: 209, end: 217, name: "Postnr"},
+            { start: 218, end: 252, name: "Adresse1"},
+            { start: 253, end: 287, name: "Adresse2"},
+            { start: 288, end: 322, name: "Adresse3"},
+            { start: 323, end: 325, name: "Landkode"},
+            { start: 326, end: 326, name: "Personstatus" }
+        ]
+    }
+]

@@ -5,17 +5,44 @@
     <title>Flat file documentation</title>
 
     <script src="js/lib/jquery-1.10.1.js"></script>
+    <script src="js/lib/handlebars-v1.1.2.js"></script>
     <script src="js/flatfiledoc.js"></script>
     <link href="style/flatfiledoc.css" rel="stylesheet" type="text/css"/>
+
+    <script id="tooltip-template" type="text/x-handlebars-template">
+        <table>
+            <thead><tr>
+                {{#each elements}}
+                <th>{{name}}</th>
+                {{/each}}
+            </tr></thead>
+            <tbody><tr>
+                {{#each elements}}
+                <td class="{{#if unknown}}unknownFormat{{/if}}">{{text}}</td>
+                {{/each}}
+            </tr></tbody>
+            <tfoot><tr>
+                {{#each elements}}
+                <td>{{{description}}}</td>
+                {{/each}}
+            </tr></tfoot>
+        </table>
+    </script>
 </head>
 <body>
-<h1>Format</h1>
-<div id="definition" class="droptarget unloaded">
+<section id="definitionArea">
+    <h1>Format</h1>
+    <span id="definitionSource">No definition loaded</span>
+    <div id="definition" class="droptarget unloaded">
 
-</div>
-<h1>Data</h1>
-<div id="data" class="droptarget unloaded">
+    </div>
+</section>
+<section id="dataArea">
+    <h1>Data</h1>
+    <span id="dataSource">No data loaded</span>
+    <div id="data" class="droptarget unloaded">
 
-</div>
+    </div>
+</section>
 </body>
 </html>
