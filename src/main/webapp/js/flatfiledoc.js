@@ -79,7 +79,6 @@ function hideLineInfo() {
 
 function displayLineInfo(data) {
     var infoElement = $("#lineinfo");
-    console.log(data);
     infoElement.html(tooltipTemplate({elements: data}));
     infoElement.show();
 }
@@ -109,19 +108,17 @@ function loadData(file) {
     if(definitionLoaded) {
         var dataHolder = $("#data");
         dataHolder.addClass("spinner");
-
         var file = file[0], reader = new FileReader();
         reader.onload = function(event) {
-
             var parsedDocument = parseDocument(event.target.result);
             $("#dataSource").text(file.name);
+
             dataHolder.removeClass("spinner");
             dataHolder.html(parsedDocument);
             dataHolder.removeClass("unloaded");
 
         };
         reader.readAsText(file);
-
         dataLoaded = true;
     }
     return false;
