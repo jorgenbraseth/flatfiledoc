@@ -5,8 +5,9 @@ https://www.iconfinder.com/iconsets/20-flat-icons
 
 */
 
-body {
+body, dt, dd  {
     font-family: verdana, sans-serif;
+    font-size: 14px;
 }
 
 #data {
@@ -19,30 +20,78 @@ body {
     display: block;
     color: black;
     margin: .3em 0;
-}
-.line.unparsed {
-    color: #aaa;
-    font-style: italic;
+    font-weight: bold;
 }
 
 .token {
     display: inline-block;
-    background-color: #eee;
+    background-color: #efe;
     margin: 0 .5em 0 0;
 }
+.token.unknownFormat {
+    background-color: #fed;
+    font-style: italic;
+    font-weight: normal;
+    /*font-size: .8em;*/
+}
 
-#droptarget {
+.droptarget.unloaded.spinner {
+    background-image: url("../img/ajax-loader.gif");
+}
+
+.droptarget.unloaded {
     color: #666;
     border: 1px solid #666;
     padding: .5em .5em .5em;
     border-radius: 10px;
-    width: 96px;
-    height: 155px;
+    min-height: 155px;
     background-image: url("../img/file.png");
     background-repeat: no-repeat;
-    background-position: center 2em;
+    background-position: center;
 }
 
-#droptarget:hover {
-    background-color: #eee;
+.droptarget.dragAllowed {
+    background-color: #eefeee;
+}
+
+#lineinfo {
+    z-index: 100;
+    position: absolute;
+    left: 2em;
+    top: 2em;
+    border: 1px solid black;
+    width: 450px;
+    min-height: 50px;
+    display: none;
+    background-color: white;
+    border-radius: 1em 1em 1em 0;
+    box-shadow: 2px 2px 17px black;
+    padding: .5em;
+    box-sizing: border-box;
+}
+
+dt,dd {
+    font-size: .7em;
+    background-color: transparent;
+    box-sizing: border-box;
+    width: 49%;
+}
+
+.valuePair {
+    background-color: red;
+    display: block;
+    position: relative;
+}
+
+dt {
+    display: table-cell;
+    float: left;
+    clear: left;
+}
+
+dd {
+    display: table-cell;
+    float: right;
+    font-weight: bold;
+    clear: right;
 }
