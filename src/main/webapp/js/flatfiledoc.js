@@ -120,6 +120,8 @@ function loadData(file) {
         };
         reader.readAsText(file);
         dataLoaded = true;
+    }else{
+        $("#dataSource").text("No definition loaded yet, could not load data");
     }
     return false;
 }
@@ -127,14 +129,19 @@ function loadDefinition(file) {
     var definitionHolder = $("#definition");
     var file = file[0], reader = new FileReader();
     reader.onload = function(event) {
-        var loadedDefs = eval(event.target.result);
-        $("#definitionSource").text(file.name);
-        var definition = $("#definition");
-        definition.text(event.target.result);
-        definition.removeClass("unloaded");
-        definition.animate({"height":200},1000);
-        lineDefs = loadedDefs;
-        definitionLoaded=true;
+        try {
+            var loadedDefs = eval(event.target.result);
+            $("#definitionSource").text(file.name);
+            var definition = $("#definition");
+            definition.text(event.target.result);
+            definition.removeClass("unloaded");
+            definition.animate({"height":200},1000);
+            lineDefs = loadedDefs;
+            definitionLoaded=true;
+        }catch (e) {
+            console.log(e);
+            $("#definitionSource").text("Couldn't load file format from file: "+file.name);
+        }
     };
     reader.readAsText(file);
     return false;
