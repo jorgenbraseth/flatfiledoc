@@ -270,8 +270,8 @@ USYSNBOF
 ENH 984236743BEDREEBTC2002022020131112N          
 USYSNBOF
 ENH 984339747NUF ENYFR2002031920131111N          
-FADRNSSY0278     NO 0301                                        Sjølyst plass 1
-FORMNSSYVirksomhet i Norge(møbler).
+FADRNSSY0278     NO 0301                                        SjÃ¸lyst plass 1
+FORMNSSYVirksomhet i Norge(mÃ¸bler).
 NAVNNSSYFRITZ HANSEN                                                                                                                                                                   HANSEN FRITZ
 R-FRNSSYJ
 ENH 984386540BEDREEBTC2002040820131112N          
@@ -290,7 +290,7 @@ ENH 986937080BEDREEBTC2004060320131112N
 USYSNBOF
 ENH 986991042AS  EEN  2004062820131112N          
 DAGLU   RD                                      18076721757
-DAGLNSSYRD                              N    00154125500075VÅRIN                                                                                               STAVA                                             5131     Salhusvegen 14                                                                                           NO L
+DAGLNSSYRD                              N    00154125500075VÃ…RIN                                                                                               STAVA                                             5131     Salhusvegen 14                                                                                           NO L
 ENH 987097884BEDREEBTC2004072820131112N          
 USYSNBOF
 ENH 987224592BEDREEBTC2004090720131112N          
@@ -338,7 +338,7 @@ ENH 990686858BEDREEBTC2006122320131112N
 USYSNBOF
 ENH 990727309AS  EEN  2007011720131112N          
 DAGLU   RD                                      08096536330
-DAGLNSSYRD                              N    00154125500075VÅRIN                                                                                               STAVA                                             5131     Salhusvegen 14                                                                                           NO L
+DAGLNSSYRD                              N    00154125500075VÃ…RIN                                                                                               STAVA                                             5131     Salhusvegen 14                                                                                           NO L
 ENH 990761795BEDREEBTC2007011520131112N          
 USYSNBOF
 ENH 991000771BEDREEBTC2007030820131112N          
@@ -488,7 +488,7 @@ USYSNBOF
 ENH 998214149BEDREEBTC2012041020131112N          
 USYSNBOF
 ENH 998559863AAFYEEN  2012062820131111N          
-FADRNSSY0278     NO 0301                                        Sjølyst plass 1
+FADRNSSY0278     NO 0301                                        SjÃ¸lyst plass 1
 NAVNNSSYFRITZ HANSEN                                                                                                                                                                   HANSEN FRITZ
 ENH 998972418BEDREEBTC2012101220131112N          
 USYSNBOF

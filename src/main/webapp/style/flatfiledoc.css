@@ -1,6 +1,5 @@
 /*
 Icons from:
-https://www.iconfinder.com/iconsets/20-flat-icons
 
 
 */
@@ -39,6 +38,21 @@ section {
     background-color: white;
 }
 
+#definition.unloaded {
+    background-image: url("../img/file_white.png");
+}
+#definition.dragAllowed {
+    background-image: url("../img/checkmark_white.png") !important;
+}
+
+#data.unloaded {
+    background-image: url("../img/file_black.png");
+}
+#data.dragAllowed {
+    background-image: url("../img/checkmark_black.png") !important;
+}
+
+
 .line {
     display: block;
     color: black;
@@ -67,18 +81,13 @@ section {
     background-image: url("../img/ajax-loader.gif");
 }
 
-.droptarget.unloaded {
+.droptarget {
     color: #666;
     padding: .5em .5em .5em;
     border-radius: 10px;
     min-height: 155px;
-    background-image: url("../img/file.png");
     background-repeat: no-repeat;
-    background-position: center;
-}
-
-.droptarget.dragAllowed {
-    background-color: #eefeee;
+    background-position: center 2em;
 }
 
 #lineinfo {

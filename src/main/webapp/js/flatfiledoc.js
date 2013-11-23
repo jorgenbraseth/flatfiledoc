@@ -117,9 +117,9 @@ function loadData(file) {
             dataHolder.removeClass("spinner");
             dataHolder.html(parsedDocument);
             dataHolder.removeClass("unloaded");
+            dataLoaded = true;
         };
         reader.readAsText(file);
-        dataLoaded = true;
     }else{
         $("#dataSource").text("No definition loaded yet, could not load data");
     }
@@ -168,12 +168,12 @@ function makeFileDropTarget(elm, onDropFunction) {
     elm.on('drop', function(e){
         elm.removeClass("dragAllowed");
         if(e.originalEvent.dataTransfer){
-                    if(e.originalEvent.dataTransfer.files.length) {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        onDropFunction(e.originalEvent.dataTransfer.files);
-                    }
-                }
+            if(e.originalEvent.dataTransfer.files.length) {
+                e.preventDefault();
+                e.stopPropagation();
+                onDropFunction(e.originalEvent.dataTransfer.files);
+            }
+        }
     });
 }
 
@@ -207,6 +207,19 @@ function preventFileDropOutsideTargets() {
     page.on('drop', function (e) {
         e.preventDefault();
         e.stopPropagation();
+    });
+}
+function preloadImages() {
+    var images = [
+        "img/file_black.png",
+        "img/file_white.png",
+        "img/ajax-loader.gif",
+        "img/checkmark_black.png",
+        "img/checkmark_white.png"
+    ];
+
+    $.each(images, function(idx, url){
+        new Image().src = url;
     });
 }
 $(function(){
